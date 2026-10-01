@@ -117,6 +117,28 @@ Event-driven cloud data platform using real CMS hospital data and Google Cloud.
 
 ---
 
+
+## 🔄 [Resilient Batch Pipeline](https://github.com/Jayanth2429/resilient-batch-pipeline)
+
+Production-style batch pipeline built on real Backblaze Drive Stats, designed to survive years of schema drift and operational failures.
+
+**Architecture:**  
+`Backblaze → Airflow → High-Water Mark → Schema Registry → Partitioned Parquet → Reliability Marts → Restatement`
+
+**Highlights**
+- Airflow orchestration and dependency management
+- Incremental high-water-mark ingestion
+- Schema drift and column-registry handling
+- Resumable historical backfills
+- Partition-aware reprocessing
+- Reliability and survival analytics
+- Historical restatement reporting
+- Automated tests and GitHub Actions CI
+
+**Tech:** `Python` `Airflow` `DuckDB` `Parquet` `Schema Evolution` `Data Quality`
+
+---
+
 ## 🧠 Engineering Areas I Focus On
 
 - Batch and streaming data pipelines
