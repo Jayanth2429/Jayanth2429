@@ -2,11 +2,11 @@
 
 ### Data Engineer | Healthcare Data | Cloud & Streaming Systems
 
-I’m a Data Engineer with nearly 5 years of experience building scalable data pipelines, streaming workflows, and cloud-native data platforms.
+I’m a Data Engineer with nearly 5 years of experience building scalable data pipelines, streaming workflows, cloud-native data platforms, and analytics solutions.
 
-My work focuses on turning complex clinical, operational, and enterprise data into reliable, production-ready data products using Python, SQL, PySpark, Databricks, Spark, Kafka, and cloud platforms including Azure, AWS, and GCP.
+My work focuses on transforming complex clinical, operational, and enterprise data into reliable, production-ready data products using Python, SQL, PySpark, Databricks, Spark, Kafka, and cloud platforms including Azure, AWS, and GCP.
 
-I’m especially interested in designing systems that are reliable when things go wrong: duplicate events, retries, schema changes, failed API calls, delayed data, and production-scale workloads.
+I’m especially interested in designing systems that remain reliable when things go wrong: duplicate events, retries, schema changes, delayed data, failed API calls, and production-scale workloads.
 
 ---
 
@@ -22,67 +22,146 @@ Apache Spark · Databricks · Delta Lake · Apache Kafka · dbt · ETL/ELT
 Microsoft Azure · AWS · Google Cloud Platform
 
 **Data Platforms**  
-Snowflake · BigQuery · PostgreSQL · SQL Server
+Snowflake · BigQuery · PostgreSQL · SQL Server · DuckDB
 
 **Healthcare & Integration**  
 HL7 · FHIR · REST APIs · OAuth 2.0
 
 **DevOps & Infrastructure**  
-Terraform · Git · CI/CD · Docker
+Terraform · Git · GitHub Actions · CI/CD · Docker
 
 **Analytics**  
-Power BI · Tableau
+Power BI · Tableau · Dimensional Modeling
 
 ---
 
-## 🚀 Projects I'm Building
+# 🚀 Featured Data Engineering Projects
 
-### Healthcare Streaming Pipeline
-Production-style streaming architecture using synthetic healthcare events, Kafka, PySpark Structured Streaming, validation, deduplication, checkpointing, and data-quality controls.
+## 🩺 [Healthcare Streaming Pipeline](https://github.com/Jayanth2429/healthcare-streaming-pipeline)
 
-### Reliable Lakehouse Pipeline
-Incremental ingestion, deterministic identifiers, SHA-256 change detection, idempotent writes, MERGE processing, auditing, and restart-safe pipeline design.
+Production-style healthcare streaming pipeline built around public, deidentified MIMIC-IV clinical data.
 
-### Analytics Engineering with dbt
-Modern ELT project covering staging models, dimensional modeling, tests, documentation, and BI-ready analytical datasets.
+**Architecture:**  
+`MIMIC-IV → Kafka/Redpanda → PySpark Structured Streaming → Validation → Deduplication → Curated Data`
 
-### Cloud Data Platform
-Cloud-native data platform demonstrating infrastructure as code, APIs, messaging, storage, observability, and CI/CD.
+**Highlights**
+- Replays historical clinical events as a real-time event stream
+- PySpark Structured Streaming
+- Schema validation and quarantine handling
+- Event-time watermarking and deduplication
+- Checkpointing and restart-safe processing
+- Automated tests and GitHub Actions CI
+
+**Tech:** `Python` `PySpark` `Kafka` `Structured Streaming` `Healthcare Data`
 
 ---
 
-## 🧠 Areas I Enjoy Working On
+## 🏗️ [Reliable Lakehouse Pipeline](https://github.com/Jayanth2429/reliable-lakehouse-pipeline)
 
-- Scalable batch and streaming data pipelines
-- Data reliability and idempotent processing
-- Healthcare interoperability
+Production-style lakehouse pipeline using real CMS hospital data to demonstrate reliable incremental processing.
+
+**Architecture:**  
+`CMS Snapshot → Validation → Change Detection → Deduplication → MERGE → Audit`
+
+**Highlights**
+- Incremental ingestion
+- Deterministic business keys
+- SHA-256 content-based change detection
+- Idempotent MERGE processing
+- Audit metrics and data-quality controls
+- Restart-safe pipeline design
+- PySpark and Delta Lake implementation patterns
+
+**Tech:** `Python` `PySpark` `Delta Lake` `Databricks` `Data Quality`
+
+---
+
+## 📊 [CMS Analytics Engineering](https://github.com/Jayanth2429/dbt-analytics-engineering)
+
+Analytics engineering project built on real CMS hospital datasets using dbt and DuckDB.
+
+**Architecture:**  
+`CMS Public Data → Raw Layer → dbt Staging → Dimensions & Facts → Tests → BI Marts`
+
+**Highlights**
+- Real CMS hospital, readmissions, and quality datasets
+- Staging, intermediate, and mart layers
+- Conformed hospital and measure dimensions
+- Fact models for readmissions and timely care
+- Dimensional modeling
+- Automated dbt data-quality and relationship tests
+- Lineage and BI-ready analytical marts
+
+**Tech:** `dbt` `SQL` `DuckDB` `Dimensional Modeling` `Healthcare Analytics`
+
+---
+
+## ☁️ [GCP Healthcare Data Platform](https://github.com/Jayanth2429/gcp-healthcare-data-platform)
+
+Event-driven cloud data platform using real CMS hospital data and Google Cloud.
+
+**Architecture:**  
+`CMS Public Data → Cloud Run → Cloud Storage → Pub/Sub → BigQuery`
+
+**Highlights**
+- Cloud Run ingestion and loading services
+- Immutable raw snapshots in Cloud Storage
+- Pub/Sub event-driven processing
+- BigQuery analytical and audit tables
+- Cloud Scheduler automation
+- Terraform infrastructure as code
+- Least-privilege service accounts and IAM
+- Python tests and Terraform validation in GitHub Actions
+
+**Tech:** `GCP` `Cloud Run` `BigQuery` `Pub/Sub` `Cloud Storage` `Terraform` `Python`
+
+---
+
+## 🧠 Engineering Areas I Focus On
+
+- Batch and streaming data pipelines
+- Reliable and idempotent processing
+- Healthcare interoperability and healthcare data
 - Distributed processing with Spark
-- Cloud data architecture
+- Lakehouse architecture
+- Cloud-native data platforms
+- Data modeling and analytics engineering
 - Data quality and observability
-- ETL/ELT modernization
+- Incremental ingestion and change detection
+- Infrastructure as code
 - Production troubleshooting and performance optimization
 
 ---
 
-## 📌 Current Focus
+## 📚 Public Data Used in These Projects
 
-I’m currently building public Data Engineering projects that demonstrate production-oriented patterns such as:
+My portfolio projects use real publicly accessible datasets where practical, including:
 
-- event-driven processing
-- incremental ingestion
-- schema validation
-- deduplication
-- retry handling
-- auditability
-- data-quality testing
-- infrastructure automation
+- **MIMIC-IV Demo** for deidentified clinical event streaming
+- **CMS Provider Data Catalog** for hospital, readmissions, and quality analytics
 
-All healthcare examples in my public projects use synthetic data and generalized architectures.
+Small deterministic fixtures are used only in unit tests so tests remain fast and reproducible.
+
+No proprietary employer code, production patient data, internal schemas, or confidential business logic is included in these repositories.
 
 ---
 
-## 🤝 Connect
+## 🌱 What I'm Exploring
+
+I’m continuing to expand this portfolio around:
+
+- Databricks and Delta Lake patterns
+- Event-driven architecture
+- Healthcare interoperability
+- Data observability
+- Cloud infrastructure automation
+- Analytics engineering
+- AI-assisted data engineering workflows
+
+---
+
+## 🤝 Connect With Me
 
 [LinkedIn](https://www.linkedin.com/in/jayanthd-data-engineer)
 
-Always happy to connect with people working in Data Engineering, healthcare technology, cloud platforms, and distributed systems.
+I'm always interested in connecting with people working in Data Engineering, healthcare technology, cloud platforms, distributed systems, and analytics engineering.
